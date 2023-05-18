@@ -16,15 +16,6 @@ public class CandidateServiceImpl implements CandidateService {
     public Candidate saveCandidate(Candidate candidate) {
         return candidateRepository.save(candidate);
     }
-    @Override
-    public Candidate getCandidateById(int id) {
-        Optional<Candidate> optionalCandidate = candidateRepository.findById(id);
-        if (optionalCandidate.isPresent()) {
-            return optionalCandidate.get();
-        } else {
-            return null;
-        }
-    }
 
     @Override
     public List<Candidate> getAllCandidates() {
@@ -39,7 +30,12 @@ public class CandidateServiceImpl implements CandidateService {
 
 
     @Override
-    public List<Candidate> getCandidatesByName(String name) {
-        return candidateRepository.findByName(name);
+    public Candidate getCandidateById(int id) {
+        Optional<Candidate> optionalCandidate = candidateRepository.findById(id);
+        if (optionalCandidate.isPresent()) {
+            return optionalCandidate.get();
+        } else {
+            return null;
+        }
     }
 }

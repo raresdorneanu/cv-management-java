@@ -11,5 +11,4 @@ public interface CandidateService {
 
     void deleteCandidate(int id);
 
-    List<Candidate> getCandidatesByName(String name);
 }
