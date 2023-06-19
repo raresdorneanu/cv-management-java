@@ -14,9 +14,4 @@ public interface CandidateRepository extends JpaRepository<Candidate, Integer> {
     List<Candidate> findCandidateById(int id);
 
     void deleteById(int id);
-
-
-//    @Modifying
-//    @Query("UPDATE Candidate c SET c.name = :name, c.education = :education, c.experience = :experience, c.address = :address WHERE c.id = :id")
-//    void updateCandidate(@Param("id") int id, @Param("name") String name, @Param("education") String education, @Param("experience") String experience, @Param("address") String address);
 }

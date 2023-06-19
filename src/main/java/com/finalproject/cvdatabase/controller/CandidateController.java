@@ -31,7 +31,7 @@ public class CandidateController {
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity uploadFile(@RequestParam MultipartFile file) throws IOException {
         String filename = file.getOriginalFilename();
-        String path = "C:\\Users\\Sonia\\Desktop\\cvmanagement-react\\public\\images\\" + filename;
+        String path = "C:\\Users\\rares\\Desktop\\Projects\\cvmanagement-react\\public\\images\\" + filename;
         File localFile = new File(path);
         file.transferTo(localFile);
         System.out.println("File uploaded " + filename + " to " + path);
